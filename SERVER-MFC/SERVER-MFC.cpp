@@ -43,8 +43,6 @@ DWORD WINAPI CommandThread(LPVOID);
 DWORD WINAPI ClientThread(LPVOID);
 
 Mat convolution(Mat);
-//void createKernelNormalize();
-//void createKernelGaussian(float);
 
 // declare variables
 int cols[64];
@@ -81,6 +79,7 @@ int main()
 			listen.Listen(5);
 			char buf[256];
 			int ret = 0;
+
 			CreateThread(0, 0, CommandThread, NULL, 0, 0);
 
 			cout << "Connecting...";
